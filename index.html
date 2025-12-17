@@ -1,773 +1,611 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  </head>
-  <body>
-    <header
-      class="bg-black text-gray-300 body-font border-b border-cyan-500/30"
-    >
-      <div
-        class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
-      >
-        <a
-          class="flex title-font font-extrabold items-center text-cyan-400 mb-4 md:mb-0 tracking-wider"
-        >
-          <img
-            src="images/teg-logo-design-inspiration-for-a-unique-identity-modern-elegance-and-creative-design-watermark-your-success-with-the-striking-this-logo-vector.png"
-            alt="Channal Logo"
-            class="w-auto h-11 drop-shadow-[0_0_10px_rgba(34,211,238,0.8)]"
-          />
-          <span class="ml-3 text-xl uppercase text-cyan-400">
-            Expert E-Sports
-          </span>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+  <header class="bg-black text-gray-300 body-font border-b border-cyan-500/30">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-extrabold items-center text-cyan-400 mb-4 md:mb-0 tracking-wider">
+        <img
+          src="images/teg-logo-design-inspiration-for-a-unique-identity-modern-elegance-and-creative-design-watermark-your-success-with-the-striking-this-logo-vector.png"
+          alt="Channal Logo" class="w-auto h-11 drop-shadow-[0_0_10px_rgba(34,211,238,0.8)]" />
+        <span class="ml-3 text-xl uppercase text-cyan-400">
+          Expert E-Sports
+        </span>
+      </a>
+
+      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+        <a class="mr-5 hover:text-cyan-400 transition duration-300 hover:drop-shadow-[0_0_6px_rgba(34,211,238,0.9)]">
+          Home
         </a>
+        <a href="category.html"
+          class="mr-5 hover:text-fuchsia-500 transition duration-300 hover:drop-shadow-[0_0_6px_rgba(217,70,239,0.9)]">
+          Catagory
+        </a>
+        <a class="mr-5 hover:text-cyan-400 transition duration-300 hover:drop-shadow-[0_0_6px_rgba(34,211,238,0.9)]">
+          Esports
+        </a>
+        <a class="mr-5 hover:text-fuchsia-500 transition duration-300 hover:drop-shadow-[0_0_6px_rgba(217,70,239,0.9)]">
+          News
+        </a>
+        <a class="mr-5 hover:text-cyan-400 transition duration-300 hover:drop-shadow-[0_0_6px_rgba(34,211,238,0.9)]">
+          Store
+        </a>
+        <a class="mr-5 hover:text-fuchsia-500 transition duration-300 hover:drop-shadow-[0_0_6px_rgba(217,70,239,0.9)]">
+          About Us
+        </a>
+      </nav>
 
-        <nav
-          class="md:ml-auto flex flex-wrap items-center text-base justify-center"
-        >
-          <a
-            class="mr-5 hover:text-cyan-400 transition duration-300 hover:drop-shadow-[0_0_6px_rgba(34,211,238,0.9)]"
-          >
-            Home
-          </a>
-          <a
-            href="category.html"
-            class="mr-5 hover:text-fuchsia-500 transition duration-300 hover:drop-shadow-[0_0_6px_rgba(217,70,239,0.9)]"
-          >
-            Catagory
-          </a>
-          <a
-            class="mr-5 hover:text-cyan-400 transition duration-300 hover:drop-shadow-[0_0_6px_rgba(34,211,238,0.9)]"
-          >
-            Esports
-          </a>
-          <a
-            class="mr-5 hover:text-fuchsia-500 transition duration-300 hover:drop-shadow-[0_0_6px_rgba(217,70,239,0.9)]"
-          >
-            News
-          </a>
-          <a
-            class="mr-5 hover:text-cyan-400 transition duration-300 hover:drop-shadow-[0_0_6px_rgba(34,211,238,0.9)]"
-          >
-            Store
-          </a>
-          <a
-            class="mr-5 hover:text-fuchsia-500 transition duration-300 hover:drop-shadow-[0_0_6px_rgba(217,70,239,0.9)]"
-          >
-            About Us
-          </a>
-        </nav>
+      <a href="login.html">
+        <button
+          class="inline-flex items-center bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-black font-semibold border-0 py-1.5 px-4 focus:outline-none rounded-md shadow-lg hover:shadow-cyan-500/50 transition duration-300 mt-4 md:mt-0">
+          Login
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </a>
+    </div>
+  </header>
 
-        <a href="login.html">
+  <hr class="border-gray-200" />
+  <section class="bg-black text-gray-300 body-font">
+    <div class="container mx-auto flex px-5 py-20 md:flex-row flex-col items-center">
+      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+        <img
+          class="object-cover object-center rounded-xl border border-cyan-500/30 shadow-[0_0_30px_rgba(34,211,238,0.3)]"
+          alt="hero"
+          src="https://www.makerstations.io/content/images/2022/04/gerwyn-manuel-desk-setup-eva-10.jpg?utm_source=chatgpt.com" />
+      </div>
+
+      <div
+        class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+        <h1
+          class="title-font sm:text-4xl text-3xl mb-4 font-extrabold text-cyan-400 tracking-wider uppercase drop-shadow-[0_0_10px_rgba(34,211,238,0.8)]">
+          Dominate the Arena
+          <br class="hidden lg:inline-block" />
+          Level Up Your Game
+        </h1>
+
+        <p class="mb-8 leading-relaxed text-gray-400">
+          Join the ultimate e-sports battleground where pro gamers compete,
+          strategies are forged, and legends are born. Stay updated with
+          tournaments, teams, live matches, and exclusive gaming content.
+        </p>
+
+        <div class="flex justify-center">
           <button
-            class="inline-flex items-center bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-black font-semibold border-0 py-1.5 px-4 focus:outline-none rounded-md shadow-lg hover:shadow-cyan-500/50 transition duration-300 mt-4 md:mt-0"
-          >
-            Login
-            <svg
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              class="w-4 h-4 ml-1"
-              viewBox="0 0 24 24"
-            >
-              <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
+            class="inline-flex text-black font-semibold bg-gradient-to-r from-cyan-500 to-fuchsia-500 border-0 py-2 px-6 focus:outline-none rounded-md text-lg shadow-lg hover:shadow-cyan-500/50 transition duration-300">
+            Join Tournament
           </button>
-        </a>
-      </div>
-    </header>
 
-    <hr class="border-gray-200" />
-    <section class="bg-black text-gray-300 body-font">
-      <div
-        class="container mx-auto flex px-5 py-20 md:flex-row flex-col items-center"
-      >
-        <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-          <img
-            class="object-cover object-center rounded-xl border border-cyan-500/30 shadow-[0_0_30px_rgba(34,211,238,0.3)]"
-            alt="hero"
-            src="https://www.makerstations.io/content/images/2022/04/gerwyn-manuel-desk-setup-eva-10.jpg?utm_source=chatgpt.com"
-          />
-        </div>
-
-        <div
-          class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center"
-        >
-          <h1
-            class="title-font sm:text-4xl text-3xl mb-4 font-extrabold text-cyan-400 tracking-wider uppercase drop-shadow-[0_0_10px_rgba(34,211,238,0.8)]"
-          >
-            Dominate the Arena
-            <br class="hidden lg:inline-block" />
-            Level Up Your Game
-          </h1>
-
-          <p class="mb-8 leading-relaxed text-gray-400">
-            Join the ultimate e-sports battleground where pro gamers compete,
-            strategies are forged, and legends are born. Stay updated with
-            tournaments, teams, live matches, and exclusive gaming content.
-          </p>
-
-          <div class="flex justify-center">
-            <button
-              class="inline-flex text-black font-semibold bg-gradient-to-r from-cyan-500 to-fuchsia-500 border-0 py-2 px-6 focus:outline-none rounded-md text-lg shadow-lg hover:shadow-cyan-500/50 transition duration-300"
-            >
-              Join Tournament
-            </button>
-
-            <button
-              class="ml-4 inline-flex text-cyan-400 bg-transparent border border-cyan-500/40 py-2 px-6 focus:outline-none rounded-md text-lg hover:bg-cyan-500/10 hover:shadow-[0_0_15px_rgba(34,211,238,0.6)] transition duration-300"
-            >
-              Watch Live
-            </button>
-          </div>
+          <button
+            class="ml-4 inline-flex text-cyan-400 bg-transparent border border-cyan-500/40 py-2 px-6 focus:outline-none rounded-md text-lg hover:bg-cyan-500/10 hover:shadow-[0_0_15px_rgba(34,211,238,0.6)] transition duration-300">
+            Watch Live
+          </button>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="bg-black text-gray-300 body-font">
-      <div class="container px-5 py-1 mx-auto">
-        <div
-          class="flex flex-wrap w-full mb-20 flex-col items-center text-center"
-        >
-          <h1
-            class="sm:text-3xl text-2xl font-extrabold title-font mb-2 text-cyan-400 uppercase tracking-wider"
-          >
-            Trending Games
-          </h1>
-          <p class="lg:w-1/2 w-full leading-relaxed text-gray-400">
-            Explore the most played and competitive games in the global e-sports
-            arena.
-          </p>
-        </div>
-
-        <div class="flex flex-wrap -m-4">
-          <!-- Card 1 -->
-          <div class="xl:w-1/3 md:w-1/2 p-4">
-            <div
-              class="border border-cyan-500/30 rounded-lg bg-black overflow-hidden hover:shadow-[0_0_25px_rgba(34,211,238,0.4)] transition"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1606813907291-d86efa6c1bfe"
-                alt="Valorant"
-                class="w-full h-48 object-cover transition-transform duration-500 ease-out hover:scale-110"
-              />
-
-              <div class="p-6">
-                <h2 class="text-lg text-cyan-400 font-semibold mb-2">
-                  Valorant
-                </h2>
-                <p class="text-gray-400">
-                  Tactical FPS with precise gunplay, ranked matches, and global
-                  tournaments.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="xl:w-1/3 md:w-1/2 p-4">
-            <div
-              class="border border-fuchsia-500/30 rounded-lg bg-black overflow-hidden hover:shadow-[0_0_25px_rgba(217,70,239,0.4)] transition"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1605902711622-cfb43c4437d1"
-                alt="PUBG"
-                class="w-full h-48 object-cover transition-transform duration-500 ease-out hover:scale-110"
-              />
-
-              <div class="p-6">
-                <h2 class="text-lg text-fuchsia-400 font-semibold mb-2">
-                  PUBG
-                </h2>
-                <p class="text-gray-400">
-                  Battle royale survival with squad tactics and intense
-                  firefights.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="xl:w-1/3 md:w-1/2 p-4">
-            <div
-              class="border border-cyan-500/30 rounded-lg bg-black overflow-hidden hover:shadow-[0_0_25px_rgba(34,211,238,0.4)] transition"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1542751371-adc38448a05e"
-                alt="Fortnite"
-                class="w-full h-48 object-cover transition-transform duration-500 ease-out hover:scale-110"
-              />
-
-              <div class="p-6">
-                <h2 class="text-lg text-cyan-400 font-semibold mb-2">
-                  Fortnite
-                </h2>
-                <p class="text-gray-400">
-                  Fast-paced action with creative builds and competitive events.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="xl:w-1/3 md:w-1/2 p-4">
-            <div
-              class="border border-fuchsia-500/30 rounded-lg bg-black overflow-hidden hover:shadow-[0_0_25px_rgba(217,70,239,0.4)] transition"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1593305841991-05c297ba4575"
-                alt="Call of Duty"
-                class="w-full h-48 object-cover transition-transform duration-500 ease-out hover:scale-110"
-              />
-
-              <div class="p-6">
-                <h2 class="text-lg text-fuchsia-400 font-semibold mb-2">
-                  Call of Duty
-                </h2>
-                <p class="text-gray-400">
-                  High-speed multiplayer combat with ranked leagues.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 5 -->
-          <div class="xl:w-1/3 md:w-1/2 p-4">
-            <div
-              class="border border-cyan-500/30 rounded-lg bg-black overflow-hidden hover:shadow-[0_0_25px_rgba(34,211,238,0.4)] transition"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1612197527274-7e9e3c2c7f7c"
-                alt="Apex Legends"
-                class="w-full h-48 object-cover transition-transform duration-500 ease-out hover:scale-110"
-              />
-
-              <div class="p-6">
-                <h2 class="text-lg text-cyan-400 font-semibold mb-2">
-                  Apex Legends
-                </h2>
-                <p class="text-gray-400">
-                  Squad-based battle royale focused on speed and legends.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 6 -->
-          <div class="xl:w-1/3 md:w-1/2 p-4">
-            <div
-              class="border border-fuchsia-500/30 rounded-lg bg-black overflow-hidden hover:shadow-[0_0_25px_rgba(217,70,239,0.4)] transition"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1605902711622-cfb43c4437d1"
-                alt="CS2"
-                class="w-full h-48 object-cover transition-transform duration-500 ease-out hover:scale-110"
-              />
-
-              <div class="p-6">
-                <h2 class="text-lg text-fuchsia-400 font-semibold mb-2">CS2</h2>
-                <p class="text-gray-400">
-                  Legendary competitive FPS with tactical gameplay.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-black text-gray-300 body-font">
-      <div class="container px-5 py-24 mx-auto">
-        <h1
-          class="text-3xl font-extrabold title-font text-cyan-400 mb-12 text-center uppercase tracking-wider drop-shadow-[0_0_10px_rgba(34,211,238,0.8)]"
-        >
-          Latest Gaming News
+  <section class="bg-black text-gray-300 body-font">
+    <div class="container px-5 py-1 mx-auto">
+      <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
+        <h1 class="sm:text-3xl text-2xl font-extrabold title-font mb-2 text-cyan-400 uppercase tracking-wider">
+          Trending Games
         </h1>
+        <p class="lg:w-1/2 w-full leading-relaxed text-gray-400">
+          Explore the most played and competitive games in the global e-sports
+          arena.
+        </p>
+      </div>
 
-        <div class="flex flex-wrap -m-4">
-          <!-- News Card 1 -->
-          <div class="p-4 md:w-1/2 w-full">
-            <div
-              class="h-full bg-black border border-cyan-500/30 p-8 rounded-lg hover:shadow-[0_0_25px_rgba(34,211,238,0.4)] transition"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                class="block w-5 h-5 text-cyan-400 mb-3"
-                viewBox="0 0 975.036 975.036"
-              >
-                <path
-                  d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399z"
-                ></path>
-              </svg>
+      <div class="flex flex-wrap -m-4">
+        <!-- Card 1 -->
+        <div class="xl:w-1/3 md:w-1/2 p-4">
+          <div
+            class="border border-cyan-500/30 rounded-lg bg-black overflow-hidden hover:shadow-[0_0_25px_rgba(34,211,238,0.4)] transition">
+            <img src="https://wallpapers.com/images/hd/3440x1440p-valorant-background-uznol55s8v0uyv74.jpg" alt="Valorant"
+              class="w-full h-48 object-cover transition-transform duration-500 ease-out hover:scale-110" />
 
-              <!-- Category Tag -->
-              <div class="mb-4">
-                <span
-                  class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/40"
-                >
-                  FPS
-                </span>
-              </div>
-
-              <p class="leading-relaxed mb-6 text-gray-400">
-                Valorant announces its next global championship with
-                record-breaking prize pools, new agents, and competitive format
-                changes shaking up the e-sports scene.
+            <div class="p-6">
+              <h2 class="text-lg text-cyan-400 font-semibold mb-2">
+                Valorant
+              </h2>
+              <p class="text-gray-400">
+                Tactical FPS with precise gunplay, ranked matches, and global
+                tournaments.
               </p>
-
-              <a class="inline-flex items-center">
-                <img
-                  alt="author"
-                  src="https://dummyimage.com/106x106"
-                  class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center border border-cyan-500/40"
-                />
-                <span class="flex-grow flex flex-col pl-4">
-                  <span class="title-font font-semibold text-cyan-400">
-                    Alex Hunter
-                  </span>
-                  <span class="text-gray-500 text-sm"> E-SPORTS ANALYST </span>
-                </span>
-              </a>
             </div>
           </div>
+        </div>
 
-          <!-- News Card 2 -->
-          <div class="p-4 md:w-1/2 w-full">
-            <div
-              class="h-full bg-black border border-fuchsia-500/30 p-8 rounded-lg hover:shadow-[0_0_25px_rgba(217,70,239,0.4)] transition"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                class="block w-5 h-5 text-fuchsia-400 mb-3"
-                viewBox="0 0 975.036 975.036"
-              >
-                <path
-                  d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399z"
-                ></path>
-              </svg>
+        <!-- Card 2 -->
+        <div class="xl:w-1/3 md:w-1/2 p-4">
+          <div
+            class="border border-fuchsia-500/30 rounded-lg bg-black overflow-hidden hover:shadow-[0_0_25px_rgba(217,70,239,0.4)] transition">
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/be59a4b8-8b3d-48c8-aa0c-226a9b247220/dcm3q8l-9c0fe4c8-1eb6-43e4-9a09-f13d2b12b8d2.jpg/v1/fill/w_460,h_215,q_75,strp/pubg_mobile_banner_steam_style_by_smnmhmdy_dcm3q8l-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjE1IiwicGF0aCI6Ii9mL2JlNTlhNGI4LThiM2QtNDhjOC1hYTBjLTIyNmE5YjI0NzIyMC9kY20zcThsLTljMGZlNGM4LTFlYjYtNDNlNC05YTA5LWYxM2QyYjEyYjhkMi5qcGciLCJ3aWR0aCI6Ijw9NDYwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.FOIa0HNgLOA9ZfZb6u-1pSMGK9K5mHVmHzoQEB79ldg" alt="PUBG"
+              class="w-full h-48 object-cover transition-transform duration-500 ease-out hover:scale-110" />
 
-              <!-- Category Tag -->
-              <div class="mb-4">
-                <span
-                  class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-fuchsia-500/20 text-fuchsia-400 border border-fuchsia-500/40"
-                >
-                  BR
-                </span>
-              </div>
-
-              <p class="leading-relaxed mb-6 text-gray-400">
-                PUBG introduces a major update featuring new maps, next-gen
-                graphics, and ranked matchmaking improvements for competitive
-                players.
+            <div class="p-6">
+              <h2 class="text-lg text-fuchsia-400 font-semibold mb-2">
+                PUBG
+              </h2>
+              <p class="text-gray-400">
+                Battle royale survival with squad tactics and intense
+                firefights.
               </p>
+            </div>
+          </div>
+        </div>
 
-              <a class="inline-flex items-center">
-                <img
-                  alt="author"
-                  src="https://dummyimage.com/107x107"
-                  class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center border border-fuchsia-500/40"
-                />
-                <span class="flex-grow flex flex-col pl-4">
-                  <span class="title-font font-semibold text-fuchsia-400">
-                    Ryan Cross
-                  </span>
-                  <span class="text-gray-500 text-sm"> GAMING JOURNALIST </span>
-                </span>
-              </a>
+        <!-- Card 3 -->
+        <div class="xl:w-1/3 md:w-1/2 p-4">
+          <div
+            class="border border-cyan-500/30 rounded-lg bg-black overflow-hidden hover:shadow-[0_0_25px_rgba(34,211,238,0.4)] transition">
+            <img src="https://i.pinimg.com/736x/48/89/c3/4889c39ff92e95f1e2ae20cb920ce974.jpg" alt="Fortnite"
+              class="w-full h-48 object-cover transition-transform duration-500 ease-out hover:scale-110" />
+
+            <div class="p-6">
+              <h2 class="text-lg text-cyan-400 font-semibold mb-2">
+                Fortnite
+              </h2>
+              <p class="text-gray-400">
+                Fast-paced action with creative builds and competitive events.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="xl:w-1/3 md:w-1/2 p-4">
+          <div
+            class="border border-fuchsia-500/30 rounded-lg bg-black overflow-hidden hover:shadow-[0_0_25px_rgba(217,70,239,0.4)] transition">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9QxoGVrA07ivDs2Bq99-yuat-OudaxT7TFA&s" alt="Call of Duty"
+              class="w-full h-48 object-cover transition-transform duration-500 ease-out hover:scale-110" />
+
+            <div class="p-6">
+              <h2 class="text-lg text-fuchsia-400 font-semibold mb-2">
+                Call of Duty
+              </h2>
+              <p class="text-gray-400">
+                High-speed multiplayer combat with ranked leagues.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="xl:w-1/3 md:w-1/2 p-4">
+          <div
+            class="border border-cyan-500/30 rounded-lg bg-black overflow-hidden hover:shadow-[0_0_25px_rgba(34,211,238,0.4)] transition">
+            <img src="https://static1.squarespace.com/static/6784ee4369ab90730da2cd49/6784ee4e69ab90730da2cf3b/6784ee5169ab90730da2d526/1742031494245/Apex_Legends_Banners.jpg?format=1500w" alt="Apex Legends"
+              class="w-full h-48 object-cover transition-transform duration-500 ease-out hover:scale-110" />
+
+            <div class="p-6">
+              <h2 class="text-lg text-cyan-400 font-semibold mb-2">
+                Apex Legends
+              </h2>
+              <p class="text-gray-400">
+                Squad-based battle royale focused on speed and legends.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="xl:w-1/3 md:w-1/2 p-4">
+          <div
+            class="border border-fuchsia-500/30 rounded-lg bg-black overflow-hidden hover:shadow-[0_0_25px_rgba(217,70,239,0.4)] transition">
+            <img src="https://ukcsgo.com/wp-content/uploads/2023/03/Article-Header-Web-CS2.png" alt="CS2"
+              class="w-full h-48 object-cover transition-transform duration-500 ease-out hover:scale-110" />
+
+            <div class="p-6">
+              <h2 class="text-lg text-fuchsia-400 font-semibold mb-2">CS2</h2>
+              <p class="text-gray-400">
+                Legendary competitive FPS with tactical gameplay.
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="bg-black text-gray-300 body-font">
-      <div class="container px-5 py-1 mx-auto flex flex-wrap">
-        <div class="flex w-full mb-20 flex-wrap items-center">
-          <h1
-            class="sm:text-3xl text-2xl font-extrabold title-font text-cyan-400 lg:w-1/3 lg:mb-0 mb-4 uppercase tracking-wider drop-shadow-[0_0_10px_rgba(34,211,238,0.8)]"
-          >
-            Games Gallery
-          </h1>
-          <p class="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-gray-400">
-            Explore stunning visuals from top competitive games, esports
-            tournaments, and next-gen gaming worlds dominating the global arena.
-          </p>
-        </div>
+  <section class="bg-black text-gray-300 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <h1
+        class="text-3xl font-extrabold title-font text-cyan-400 mb-12 text-center uppercase tracking-wider drop-shadow-[0_0_10px_rgba(34,211,238,0.8)]">
+        Latest Gaming News
+      </h1>
 
-        <div class="flex flex-wrap md:-m-2 -m-1">
-          <!-- Left Column -->
-          <div class="flex flex-wrap w-1/2">
-            <div class="md:p-2 p-1 w-1/2 overflow-hidden rounded-lg">
-              <img
-                alt="gallery"
-                class="w-full h-full object-cover object-center block transition-transform duration-500 hover:scale-110"
-                src="https://dummyimage.com/500x300"
-              />
-            </div>
-
-            <div class="md:p-2 p-1 w-1/2 overflow-hidden rounded-lg">
-              <img
-                alt="gallery"
-                class="w-full h-full object-cover object-center block transition-transform duration-500 hover:scale-110"
-                src="https://dummyimage.com/501x301"
-              />
-            </div>
-
-            <div class="md:p-2 p-1 w-full overflow-hidden rounded-lg">
-              <img
-                alt="gallery"
-                class="w-full h-full object-cover object-center block transition-transform duration-500 hover:scale-110"
-                src="https://dummyimage.com/600x360"
-              />
-            </div>
-          </div>
-
-          <!-- Right Column -->
-          <div class="flex flex-wrap w-1/2">
-            <div class="md:p-2 p-1 w-full overflow-hidden rounded-lg">
-              <img
-                alt="gallery"
-                class="w-full h-full object-cover object-center block transition-transform duration-500 hover:scale-110"
-                src="https://dummyimage.com/601x361"
-              />
-            </div>
-
-            <div class="md:p-2 p-1 w-1/2 overflow-hidden rounded-lg">
-              <img
-                alt="gallery"
-                class="w-full h-full object-cover object-center block transition-transform duration-500 hover:scale-110"
-                src="https://dummyimage.com/502x302"
-              />
-            </div>
-
-            <div class="md:p-2 p-1 w-1/2 overflow-hidden rounded-lg">
-              <img
-                alt="gallery"
-                class="w-full h-full object-cover object-center block transition-transform duration-500 hover:scale-110"
-                src="https://dummyimage.com/503x303"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-black text-gray-300 body-font">
-      <div class="container px-5 py-15 mx-auto">
-        <h1
-          class="text-3xl font-extrabold title-font text-cyan-400 mb-12 text-center uppercase tracking-wider drop-shadow-[0_0_10px_rgba(34,211,238,0.8)]"
-        >
-          Player Statistics
-        </h1>
-
-        <div class="flex flex-wrap -m-4 text-center">
-          <!-- Stat 1 -->
-          <div class="p-4 sm:w-1/4 w-1/2">
-            <h2
-              class="title-font font-extrabold sm:text-4xl text-3xl text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]"
-            >
-              2.7K
-            </h2>
-            <p class="leading-relaxed text-gray-400 uppercase tracking-wide">
-              Active Players
-            </p>
-          </div>
-
-          <!-- Stat 2 -->
-          <div class="p-4 sm:w-1/4 w-1/2">
-            <h2
-              class="title-font font-extrabold sm:text-4xl text-3xl text-fuchsia-400 drop-shadow-[0_0_8px_rgba(217,70,239,0.8)]"
-            >
-              1.8K
-            </h2>
-            <p class="leading-relaxed text-gray-400 uppercase tracking-wide">
-              Subscribers
-            </p>
-          </div>
-
-          <!-- Stat 3 -->
-          <div class="p-4 sm:w-1/4 w-1/2">
-            <h2
-              class="title-font font-extrabold sm:text-4xl text-3xl text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]"
-            >
-              35
-            </h2>
-            <p class="leading-relaxed text-gray-400 uppercase tracking-wide">
-              Game Downloads
-            </p>
-          </div>
-
-          <!-- Stat 4 -->
-          <div class="p-4 sm:w-1/4 w-1/2">
-            <h2
-              class="title-font font-extrabold sm:text-4xl text-3xl text-fuchsia-400 drop-shadow-[0_0_8px_rgba(217,70,239,0.8)]"
-            >
-              4
-            </h2>
-            <p class="leading-relaxed text-gray-400 uppercase tracking-wide">
-              Esports Titles
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-black text-gray-300 body-font relative">
-      <div class="container px-5 py-15 mx-auto">
-        <div class="flex flex-col text-center w-full mb-12">
-          <h1
-            class="sm:text-3xl text-2xl font-extrabold title-font mb-4 text-cyan-400 uppercase tracking-wider drop-shadow-[0_0_10px_rgba(34,211,238,0.8)]"
-          >
-            Contact Our Team
-          </h1>
-          <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-400">
-            Get in touch for tournaments, partnerships, support, or esports
-            collaborations.
-          </p>
-        </div>
-
-        <div class="lg:w-1/2 md:w-2/3 mx-auto">
-          <div class="flex flex-wrap -m-2">
-            <!-- Name -->
-            <div class="p-2 w-1/2">
-              <div class="relative">
-                <label
-                  for="name"
-                  class="leading-7 text-sm text-gray-400 uppercase tracking-wide"
-                >
-                  Gamer Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  class="w-full bg-black bg-opacity-60 rounded border border-cyan-500/40 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/30 text-base outline-none text-gray-300 py-1 px-3 leading-8 transition duration-200"
-                />
-              </div>
-            </div>
-
-            <!-- Email -->
-            <div class="p-2 w-1/2">
-              <div class="relative">
-                <label
-                  for="email"
-                  class="leading-7 text-sm text-gray-400 uppercase tracking-wide"
-                >
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  class="w-full bg-black bg-opacity-60 rounded border border-fuchsia-500/40 focus:border-fuchsia-400 focus:ring-2 focus:ring-fuchsia-500/30 text-base outline-none text-gray-300 py-1 px-3 leading-8 transition duration-200"
-                />
-              </div>
-            </div>
-
-            <!-- Message -->
-            <div class="p-2 w-full">
-              <div class="relative">
-                <label
-                  for="message"
-                  class="leading-7 text-sm text-gray-400 uppercase tracking-wide"
-                >
-                  Your Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  class="w-full bg-black bg-opacity-60 rounded border border-cyan-500/40 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/30 h-32 text-base outline-none text-gray-300 py-1 px-3 resize-none leading-6 transition duration-200"
-                ></textarea>
-              </div>
-            </div>
-
-            <!-- Button -->
-            <div class="p-2 w-full">
-              <button
-                class="flex mx-auto text-black font-semibold bg-gradient-to-r from-cyan-500 to-fuchsia-500 border-0 py-2 px-8 focus:outline-none rounded-md text-lg shadow-lg hover:shadow-cyan-500/50 transition duration-300"
-              >
-                Send Message
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer
-      class="bg-black text-gray-300 body-font border-t border-cyan-500/30"
-    >
-      <div
-        class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col"
-      >
-        <!-- Brand -->
-        <div
-          class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left"
-        >
-          <a
-            class="flex title-font font-extrabold items-center md:justify-start justify-center text-cyan-400"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              class="w-10 h-10 p-2 bg-gradient-to-r from-cyan-500 to-fuchsia-500 rounded-full text-black"
-              viewBox="0 0 24 24"
-            >
+      <div class="flex flex-wrap -m-4">
+        <!-- News Card 1 -->
+        <div class="p-4 md:w-1/2 w-full">
+          <div
+            class="h-full bg-black border border-cyan-500/30 p-8 rounded-lg hover:shadow-[0_0_25px_rgba(34,211,238,0.4)] transition">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-5 h-5 text-cyan-400 mb-3"
+              viewBox="0 0 975.036 975.036">
               <path
-                d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
-              ></path>
+                d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399z">
+              </path>
             </svg>
-            <span class="ml-3 text-xl uppercase tracking-wider"
-              >Expert E-Sports</span
-            >
+
+            <!-- Category Tag -->
+            <div class="mb-4">
+              <span
+                class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/40">
+                FPS
+              </span>
+            </div>
+
+            <p class="leading-relaxed mb-6 text-gray-400">
+              Valorant announces its next global championship with
+              record-breaking prize pools, new agents, and competitive format
+              changes shaking up the e-sports scene.
+            </p>
+
+            <a class="inline-flex items-center">
+              <img alt="author" src="https://dummyimage.com/106x106"
+                class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center border border-cyan-500/40" />
+              <span class="flex-grow flex flex-col pl-4">
+                <span class="title-font font-semibold text-cyan-400">
+                  Alex Hunter
+                </span>
+                <span class="text-gray-500 text-sm"> E-SPORTS ANALYST </span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- News Card 2 -->
+        <div class="p-4 md:w-1/2 w-full">
+          <div
+            class="h-full bg-black border border-fuchsia-500/30 p-8 rounded-lg hover:shadow-[0_0_25px_rgba(217,70,239,0.4)] transition">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-5 h-5 text-fuchsia-400 mb-3"
+              viewBox="0 0 975.036 975.036">
+              <path
+                d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399z">
+              </path>
+            </svg>
+
+            <!-- Category Tag -->
+            <div class="mb-4">
+              <span
+                class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-fuchsia-500/20 text-fuchsia-400 border border-fuchsia-500/40">
+                BR
+              </span>
+            </div>
+
+            <p class="leading-relaxed mb-6 text-gray-400">
+              PUBG introduces a major update featuring new maps, next-gen
+              graphics, and ranked matchmaking improvements for competitive
+              players.
+            </p>
+
+            <a class="inline-flex items-center">
+              <img alt="author" src="https://dummyimage.com/107x107"
+                class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center border border-fuchsia-500/40" />
+              <span class="flex-grow flex flex-col pl-4">
+                <span class="title-font font-semibold text-fuchsia-400">
+                  Ryan Cross
+                </span>
+                <span class="text-gray-500 text-sm"> GAMING JOURNALIST </span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-black text-gray-300 body-font">
+    <div class="container px-5 py-1 mx-auto flex flex-wrap">
+      <div class="flex w-full mb-20 flex-wrap items-center">
+        <h1
+          class="sm:text-3xl text-2xl font-extrabold title-font text-cyan-400 lg:w-1/3 lg:mb-0 mb-4 uppercase tracking-wider drop-shadow-[0_0_10px_rgba(34,211,238,0.8)]">
+          Games Gallery
+        </h1>
+        <p class="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-gray-400">
+          Explore stunning visuals from top competitive games, esports
+          tournaments, and next-gen gaming worlds dominating the global arena.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap md:-m-2 -m-1">
+        <!-- Left Column -->
+        <div class="flex flex-wrap w-1/2">
+          <div class="md:p-2 p-1 w-1/2 overflow-hidden rounded-lg">
+            <img alt="gallery"
+              class="w-full h-full object-cover object-center block transition-transform duration-500 hover:scale-110"
+              src="https://wallpapers.com/images/hd/valorant-agent-reyna-showcase-rrt810086qzfwqka.jpg" />
+          </div>
+
+          <div class="md:p-2 p-1 w-1/2 overflow-hidden rounded-lg">
+            <img alt="gallery"
+              class="w-full h-full object-cover object-center block transition-transform duration-500 hover:scale-110"
+              src="https://t3.ftcdn.net/jpg/16/40/27/56/360_F_1640275640_W0oKeRO0lOaZ0aEpki82XoVtkqrVjg3v.jpg" />
+          </div>
+
+          <div class="md:p-2 p-1 w-full overflow-hidden rounded-lg">
+            <img alt="gallery"
+              class="w-full h-full object-cover object-center block transition-transform duration-500 hover:scale-110"
+              src="https://media.istockphoto.com/id/1170073824/photo/gamer-work-space-concept-top-view-a-gaming-gear-mouse-keyboard-joystick-headset-mobile.jpg?s=612x612&w=0&k=20&c=2d8z6CmJn6R1GaPpJ4HB4J43y4e0wOL4nusPM2Dhq34=" />
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="flex flex-wrap w-1/2">
+          <div class="md:p-2 p-1 w-full overflow-hidden rounded-lg">
+            <img alt="gallery"
+              class="w-full h-full object-cover object-center block transition-transform duration-500 hover:scale-110"
+              src="https://media.istockphoto.com/id/1272313663/photo/gaming-room.jpg?s=612x612&w=0&k=20&c=B7d_KfcSlpSK7M0hOLpYM6brhxmioAauDEa59_A8y8k=" />
+          </div>
+
+          <div class="md:p-2 p-1 w-1/2 overflow-hidden rounded-lg">
+            <img alt="gallery"
+              class="w-full h-full object-cover object-center block transition-transform duration-500 hover:scale-110"
+              src="https://static0.polygonimages.com/wordpress/wp-content/uploads/chorus/uploads/chorus_asset/file/9772799/AC4.jpg?q=50&fit=crop&w=1300&dpr=1.5" />
+          </div>
+
+          <div class="md:p-2 p-1 w-1/2 overflow-hidden rounded-lg">
+            <img alt="gallery"
+              class="w-full h-full object-cover object-center block transition-transform duration-500 hover:scale-110"
+              src="https://images.pushsquare.com/5ee1f706cd314/screenshot-571.900x.jpg" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-black text-gray-300 body-font">
+    <div class="container px-5 py-15 mx-auto">
+      <h1
+        class="text-3xl font-extrabold title-font text-cyan-400 mb-12 text-center uppercase tracking-wider drop-shadow-[0_0_10px_rgba(34,211,238,0.8)]">
+        Player Statistics
+      </h1>
+
+      <div class="flex flex-wrap -m-4 text-center">
+        <!-- Stat 1 -->
+        <div class="p-4 sm:w-1/4 w-1/2">
+          <h2
+            class="title-font font-extrabold sm:text-4xl text-3xl text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]">
+            2.7K
+          </h2>
+          <p class="leading-relaxed text-gray-400 uppercase tracking-wide">
+            Active Players
+          </p>
+        </div>
+
+        <!-- Stat 2 -->
+        <div class="p-4 sm:w-1/4 w-1/2">
+          <h2
+            class="title-font font-extrabold sm:text-4xl text-3xl text-fuchsia-400 drop-shadow-[0_0_8px_rgba(217,70,239,0.8)]">
+            1.8K
+          </h2>
+          <p class="leading-relaxed text-gray-400 uppercase tracking-wide">
+            Subscribers
+          </p>
+        </div>
+
+        <!-- Stat 3 -->
+        <div class="p-4 sm:w-1/4 w-1/2">
+          <h2
+            class="title-font font-extrabold sm:text-4xl text-3xl text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]">
+            35
+          </h2>
+          <p class="leading-relaxed text-gray-400 uppercase tracking-wide">
+            Game Downloads
+          </p>
+        </div>
+
+        <!-- Stat 4 -->
+        <div class="p-4 sm:w-1/4 w-1/2">
+          <h2
+            class="title-font font-extrabold sm:text-4xl text-3xl text-fuchsia-400 drop-shadow-[0_0_8px_rgba(217,70,239,0.8)]">
+            4
+          </h2>
+          <p class="leading-relaxed text-gray-400 uppercase tracking-wide">
+            Esports Titles
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-black text-gray-300 body-font relative">
+    <div class="container px-5 py-15 mx-auto">
+      <div class="flex flex-col text-center w-full mb-12">
+        <h1
+          class="sm:text-3xl text-2xl font-extrabold title-font mb-4 text-cyan-400 uppercase tracking-wider drop-shadow-[0_0_10px_rgba(34,211,238,0.8)]">
+          Contact Our Team
+        </h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-400">
+          Get in touch for tournaments, partnerships, support, or esports
+          collaborations.
+        </p>
+      </div>
+
+      <div class="lg:w-1/2 md:w-2/3 mx-auto">
+        <div class="flex flex-wrap -m-2">
+          <!-- Name -->
+          <div class="p-2 w-1/2">
+            <div class="relative">
+              <label for="name" class="leading-7 text-sm text-gray-400 uppercase tracking-wide">
+                Gamer Name
+              </label>
+              <input type="text" id="name" name="name"
+                class="w-full bg-black bg-opacity-60 rounded border border-cyan-500/40 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/30 text-base outline-none text-gray-300 py-1 px-3 leading-8 transition duration-200" />
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="p-2 w-1/2">
+            <div class="relative">
+              <label for="email" class="leading-7 text-sm text-gray-400 uppercase tracking-wide">
+                Email Address
+              </label>
+              <input type="email" id="email" name="email"
+                class="w-full bg-black bg-opacity-60 rounded border border-fuchsia-500/40 focus:border-fuchsia-400 focus:ring-2 focus:ring-fuchsia-500/30 text-base outline-none text-gray-300 py-1 px-3 leading-8 transition duration-200" />
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div class="p-2 w-full">
+            <div class="relative">
+              <label for="message" class="leading-7 text-sm text-gray-400 uppercase tracking-wide">
+                Your Message
+              </label>
+              <textarea id="message" name="message"
+                class="w-full bg-black bg-opacity-60 rounded border border-cyan-500/40 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/30 h-32 text-base outline-none text-gray-300 py-1 px-3 resize-none leading-6 transition duration-200"></textarea>
+            </div>
+          </div>
+
+          <!-- Button -->
+          <div class="p-2 w-full">
+            <button
+              class="flex mx-auto text-black font-semibold bg-gradient-to-r from-cyan-500 to-fuchsia-500 border-0 py-2 px-8 focus:outline-none rounded-md text-lg shadow-lg hover:shadow-cyan-500/50 transition duration-300">
+              Send Message
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-black text-gray-300 body-font border-t border-cyan-500/30">
+    <div
+      class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+      <!-- Brand -->
+      <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+        <a class="flex title-font font-extrabold items-center md:justify-start justify-center text-cyan-400">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="2"
+            class="w-10 h-10 p-2 bg-gradient-to-r from-cyan-500 to-fuchsia-500 rounded-full text-black"
+            viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+          </svg>
+          <span class="ml-3 text-xl uppercase tracking-wider">Expert E-Sports</span>
+        </a>
+        <p class="mt-2 text-sm text-gray-400">
+          The ultimate hub for competitive gaming, tournaments, and esports
+          action.
+        </p>
+      </div>
+
+      <!-- Links -->
+      <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+        <!-- Column 1 -->
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-semibold text-cyan-400 tracking-widest text-sm mb-3 uppercase">
+            Games
+          </h2>
+          <nav class="list-none mb-10 space-y-2">
+            <li><a class="hover:text-cyan-400 transition">FPS Games</a></li>
+            <li>
+              <a class="hover:text-cyan-400 transition">Battle Royale</a>
+            </li>
+            <li><a class="hover:text-cyan-400 transition">MOBA</a></li>
+            <li>
+              <a class="hover:text-cyan-400 transition">New Releases</a>
+            </li>
+          </nav>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-semibold text-fuchsia-400 tracking-widest text-sm mb-3 uppercase">
+            E-Sports
+          </h2>
+          <nav class="list-none mb-10 space-y-2">
+            <li>
+              <a class="hover:text-fuchsia-400 transition">Tournaments</a>
+            </li>
+            <li><a class="hover:text-fuchsia-400 transition">Teams</a></li>
+            <li>
+              <a class="hover:text-fuchsia-400 transition">Live Matches</a>
+            </li>
+            <li><a class="hover:text-fuchsia-400 transition">Rankings</a></li>
+          </nav>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-semibold text-cyan-400 tracking-widest text-sm mb-3 uppercase">
+            Community
+          </h2>
+          <nav class="list-none mb-10 space-y-2">
+            <li><a class="hover:text-cyan-400 transition">Forums</a></li>
+            <li><a class="hover:text-cyan-400 transition">Creators</a></li>
+            <li><a class="hover:text-cyan-400 transition">Clips</a></li>
+            <li><a class="hover:text-cyan-400 transition">Events</a></li>
+          </nav>
+        </div>
+
+        <!-- Column 4 -->
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-semibold text-fuchsia-400 tracking-widest text-sm mb-3 uppercase">
+            Support
+          </h2>
+          <nav class="list-none mb-10 space-y-2">
+            <li><a class="hover:text-fuchsia-400 transition">Contact</a></li>
+            <li><a class="hover:text-fuchsia-400 transition">FAQ</a></li>
+            <li>
+              <a class="hover:text-fuchsia-400 transition">Privacy Policy</a>
+            </li>
+            <li>
+              <a class="hover:text-fuchsia-400 transition">Terms & Conditions</a>
+            </li>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="bg-black border-t border-cyan-500/20">
+      <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row items-center">
+        <p class="text-gray-500 text-sm text-center sm:text-left">
+          © 2025 Expert E-Sports —
+          <span class="text-cyan-400">All Rights Reserved</span>
+        </p>
+
+        <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start space-x-3">
+          <a class="text-gray-500 hover:text-cyan-400 transition">
+            <!-- Facebook -->
+            <svg fill="currentColor" class="w-5 h-5" viewBox="0 0 24 24">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+            </svg>
           </a>
-          <p class="mt-2 text-sm text-gray-400">
-            The ultimate hub for competitive gaming, tournaments, and esports
-            action.
-          </p>
-        </div>
-
-        <!-- Links -->
-        <div
-          class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center"
-        >
-          <!-- Column 1 -->
-          <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2
-              class="title-font font-semibold text-cyan-400 tracking-widest text-sm mb-3 uppercase"
-            >
-              Games
-            </h2>
-            <nav class="list-none mb-10 space-y-2">
-              <li><a class="hover:text-cyan-400 transition">FPS Games</a></li>
-              <li>
-                <a class="hover:text-cyan-400 transition">Battle Royale</a>
-              </li>
-              <li><a class="hover:text-cyan-400 transition">MOBA</a></li>
-              <li>
-                <a class="hover:text-cyan-400 transition">New Releases</a>
-              </li>
-            </nav>
-          </div>
-
-          <!-- Column 2 -->
-          <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2
-              class="title-font font-semibold text-fuchsia-400 tracking-widest text-sm mb-3 uppercase"
-            >
-              E-Sports
-            </h2>
-            <nav class="list-none mb-10 space-y-2">
-              <li>
-                <a class="hover:text-fuchsia-400 transition">Tournaments</a>
-              </li>
-              <li><a class="hover:text-fuchsia-400 transition">Teams</a></li>
-              <li>
-                <a class="hover:text-fuchsia-400 transition">Live Matches</a>
-              </li>
-              <li><a class="hover:text-fuchsia-400 transition">Rankings</a></li>
-            </nav>
-          </div>
-
-          <!-- Column 3 -->
-          <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2
-              class="title-font font-semibold text-cyan-400 tracking-widest text-sm mb-3 uppercase"
-            >
-              Community
-            </h2>
-            <nav class="list-none mb-10 space-y-2">
-              <li><a class="hover:text-cyan-400 transition">Forums</a></li>
-              <li><a class="hover:text-cyan-400 transition">Creators</a></li>
-              <li><a class="hover:text-cyan-400 transition">Clips</a></li>
-              <li><a class="hover:text-cyan-400 transition">Events</a></li>
-            </nav>
-          </div>
-
-          <!-- Column 4 -->
-          <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2
-              class="title-font font-semibold text-fuchsia-400 tracking-widest text-sm mb-3 uppercase"
-            >
-              Support
-            </h2>
-            <nav class="list-none mb-10 space-y-2">
-              <li><a class="hover:text-fuchsia-400 transition">Contact</a></li>
-              <li><a class="hover:text-fuchsia-400 transition">FAQ</a></li>
-              <li>
-                <a class="hover:text-fuchsia-400 transition">Privacy Policy</a>
-              </li>
-              <li>
-                <a class="hover:text-fuchsia-400 transition"
-                  >Terms & Conditions</a
-                >
-              </li>
-            </nav>
-          </div>
-        </div>
+          <a class="text-gray-500 hover:text-fuchsia-400 transition">
+            <!-- Twitter -->
+            <svg fill="currentColor" class="w-5 h-5" viewBox="0 0 24 24">
+              <path d="M23 3a10.9 10.9 0 01-3.14 1.53"></path>
+            </svg>
+          </a>
+          <a class="text-gray-500 hover:text-cyan-400 transition">
+            <!-- Instagram -->
+            <svg fill="none" stroke="currentColor" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1112.63 8"></path>
+            </svg>
+          </a>
+          <a class="text-gray-500 hover:text-fuchsia-400 transition">
+            <!-- LinkedIn -->
+            <svg fill="currentColor" class="w-5 h-5" viewBox="0 0 24 24">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7"></path>
+            </svg>
+          </a>
+        </span>
       </div>
+    </div>
+  </footer>
+</body>
 
-      <!-- Bottom Bar -->
-      <div class="bg-black border-t border-cyan-500/20">
-        <div
-          class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row items-center"
-        >
-          <p class="text-gray-500 text-sm text-center sm:text-left">
-            © 2025 Expert E-Sports —
-            <span class="text-cyan-400">All Rights Reserved</span>
-          </p>
-
-          <span
-            class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start space-x-3"
-          >
-            <a class="text-gray-500 hover:text-cyan-400 transition">
-              <!-- Facebook -->
-              <svg fill="currentColor" class="w-5 h-5" viewBox="0 0 24 24">
-                <path
-                  d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
-                ></path>
-              </svg>
-            </a>
-            <a class="text-gray-500 hover:text-fuchsia-400 transition">
-              <!-- Twitter -->
-              <svg fill="currentColor" class="w-5 h-5" viewBox="0 0 24 24">
-                <path d="M23 3a10.9 10.9 0 01-3.14 1.53"></path>
-              </svg>
-            </a>
-            <a class="text-gray-500 hover:text-cyan-400 transition">
-              <!-- Instagram -->
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                class="w-5 h-5"
-                viewBox="0 0 24 24"
-              >
-                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1112.63 8"></path>
-              </svg>
-            </a>
-            <a class="text-gray-500 hover:text-fuchsia-400 transition">
-              <!-- LinkedIn -->
-              <svg fill="currentColor" class="w-5 h-5" viewBox="0 0 24 24">
-                <path d="M16 8a6 6 0 016 6v7h-4v-7"></path>
-              </svg>
-            </a>
-          </span>
-        </div>
-      </div>
-    </footer>
-  </body>
 </html>
