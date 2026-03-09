@@ -46,6 +46,8 @@
                         </svg>
                         <span class="cart-count hidden">0</span>
                     </a>
+                    <!-- Auth Links (Desktop) -->
+                    <div id="authLinksDesktop" class="hidden lg:flex items-center gap-2"></div>
                     <button id="mobileMenuBtn"
                         class="lg:hidden p-2.5 rounded-xl hover:bg-emerald-50 transition-colors text-gray-600"
                         aria-label="Menu">
@@ -76,6 +78,8 @@
         <a href="about.html" class="mobile-nav-link">ℹ️ About</a>
         <a href="contact.html" class="mobile-nav-link">📧 Contact</a>
         <a href="cart.html" class="mobile-nav-link">🛒 Cart</a>
+        <!-- Auth Links (Mobile) -->
+        <div id="authLinksMobile"></div>
     </div>
 
     <!-- Search Modal -->
@@ -161,6 +165,7 @@
 
     <script src="js/products.js"></script>
     <script src="js/cart.js"></script>
+    <script src="js/auth.js"></script>
     <script src="js/main.js"></script>
 </body>
 
