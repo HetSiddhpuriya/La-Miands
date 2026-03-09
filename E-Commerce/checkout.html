@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Urban Jungle Co.</title>
+    <meta name="description"
+        content="Complete your purchase securely. Urban Jungle Co. - Premium indoor and outdoor plants with free shipping over $50.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+</head>
+
+<body class="bg-gray-50/50">
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="logo-text flex items-center gap-2">
+                    🌿 <span class="hidden sm:inline">Urban</span> Jungle <span>Co.</span>
+                </a>
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="shop.html" class="nav-link">Shop</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                <div class="flex items-center gap-3">
+                    <a href="cart.html"
+                        class="p-2.5 rounded-xl hover:bg-emerald-50 transition-colors text-gray-600 hover:text-emerald-700 relative"
+                        aria-label="Cart">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z" />
+                        </svg>
+                        <span class="cart-count hidden">0</span>
+                    </a>
+                    <button id="mobileMenuBtn"
+                        class="lg:hidden p-2.5 rounded-xl hover:bg-emerald-50 transition-colors text-gray-600"
+                        aria-label="Menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenuOverlay" class="mobile-menu-overlay"></div>
+    <div id="mobileMenu" class="mobile-menu">
+        <div class="flex items-center justify-between mb-8">
+            <span class="logo-text text-xl">🌿 Urban Jungle</span>
+            <button id="mobileMenuClose" class="p-2 rounded-lg hover:bg-gray-100 transition-colors"
+                aria-label="Close menu">
+                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <a href="index.html" class="mobile-nav-link">🏠 Home</a>
+        <a href="shop.html" class="mobile-nav-link">🛍️ Shop</a>
+        <a href="about.html" class="mobile-nav-link">ℹ️ About</a>
+        <a href="contact.html" class="mobile-nav-link">📧 Contact</a>
+        <a href="cart.html" class="mobile-nav-link">🛒 Cart</a>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="relative z-10">
+            <h1 class="text-3xl lg:text-5xl font-bold text-white mb-3" style="font-family: var(--font-display);">
+                Checkout</h1>
+            <p class="text-emerald-200/80 text-lg">Complete your order securely</p>
+            <nav class="flex items-center justify-center gap-2 text-sm text-emerald-300/70 mt-4">
+                <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                <span>/</span>
+                <a href="cart.html" class="hover:text-white transition-colors">Cart</a>
+                <span>/</span>
+                <span class="text-white">Checkout</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Checkout Content -->
+    <section class="py-10 lg:py-16" id="checkoutContent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <!-- Checkout Form -->
+                <div class="lg:col-span-2">
+                    <form id="checkoutForm" class="space-y-6">
+                        <!-- Personal Information -->
+                        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2">
+                                <span
+                                    class="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 text-sm font-bold">1</span>
+                                Personal Information
+                            </h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="fullName" class="form-label">Full Name *</label>
+                                    <input type="text" id="fullName" name="fullName" class="form-input"
+                                        placeholder="John Doe" required>
+                                </div>
+                                <div>
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" id="email" name="email" class="form-input"
+                                        placeholder="john@example.com" required>
+                                </div>
+                                <div class="md:col-span-2">
+                                    <label for="phone" class="form-label">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" class="form-input"
+                                        placeholder="+1 (555) 123-4567" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Shipping Address -->
+                        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2">
+                                <span
+                                    class="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 text-sm font-bold">2</span>
+                                Shipping Address
+                            </h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <label for="address" class="form-label">Street Address *</label>
+                                    <input type="text" id="address" name="address" class="form-input"
+                                        placeholder="123 Green Street" required>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                    <div>
+                                        <label for="city" class="form-label">City *</label>
+                                        <input type="text" id="city" name="city" class="form-input"
+                                            placeholder="Garden City" required>
+                                    </div>
+                                    <div>
+                                        <label for="state" class="form-label">State *</label>
+                                        <input type="text" id="state" name="state" class="form-input"
+                                            placeholder="California" required>
+                                    </div>
+                                    <div>
+                                        <label for="zip" class="form-label">ZIP Code *</label>
+                                        <input type="text" id="zip" name="zip" class="form-input" placeholder="90210"
+                                            required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Payment Method -->
+                        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2">
+                                <span
+                                    class="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 text-sm font-bold">3</span>
+                                Payment Method
+                            </h3>
+                            <div class="space-y-3">
+                                <label
+                                    class="flex items-center gap-3 p-4 border-2 border-gray-200 rounded-xl cursor-pointer transition-all hover:border-emerald-400 has-[:checked]:border-emerald-500 has-[:checked]:bg-emerald-50">
+                                    <input type="radio" name="paymentMethod" value="credit-card"
+                                        class="w-4 h-4 text-emerald-600 focus:ring-emerald-500" checked>
+                                    <div class="flex items-center gap-3">
+                                        <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                                        </svg>
+                                        <span class="font-medium">Credit / Debit Card</span>
+                                    </div>
+                                </label>
+                                <label
+                                    class="flex items-center gap-3 p-4 border-2 border-gray-200 rounded-xl cursor-pointer transition-all hover:border-emerald-400 has-[:checked]:border-emerald-500 has-[:checked]:bg-emerald-50">
+                                    <input type="radio" name="paymentMethod" value="paypal"
+                                        class="w-4 h-4 text-emerald-600 focus:ring-emerald-500">
+                                    <div class="flex items-center gap-3">
+                                        <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                                        </svg>
+                                        <span class="font-medium">PayPal</span>
+                                    </div>
+                                </label>
+                                <label
+                                    class="flex items-center gap-3 p-4 border-2 border-gray-200 rounded-xl cursor-pointer transition-all hover:border-emerald-400 has-[:checked]:border-emerald-500 has-[:checked]:bg-emerald-50">
+                                    <input type="radio" name="paymentMethod" value="cod"
+                                        class="w-4 h-4 text-emerald-600 focus:ring-emerald-500">
+                                    <div class="flex items-center gap-3">
+                                        <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                        <span class="font-medium">Cash on Delivery</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-primary w-full py-4 text-lg">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                            Place Order
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Order Summary -->
+                <div>
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sticky top-24">
+                        <h3 class="text-lg font-bold text-gray-900 mb-6">Order Summary</h3>
+                        <div id="checkoutItems" class="mb-6 max-h-72 overflow-y-auto">
+                            <!-- Rendered by JS -->
+                        </div>
+                        <div class="space-y-3 border-t border-gray-100 pt-4">
+                            <div class="flex justify-between text-gray-600">
+                                <span>Subtotal</span>
+                                <span class="font-semibold text-gray-800" id="checkoutSubtotal">$0.00</span>
+                            </div>
+                            <div class="flex justify-between text-gray-600">
+                                <span>Shipping</span>
+                                <span class="font-semibold text-gray-800" id="checkoutShipping">$0.00</span>
+                            </div>
+                            <div
+                                class="border-t border-gray-100 pt-3 flex justify-between text-lg font-bold text-gray-900">
+                                <span>Total</span>
+                                <span class="text-emerald-700" id="checkoutTotal">$0.00</span>
+                            </div>
+                        </div>
+                        <div class="mt-6 flex items-center gap-2 text-sm text-gray-500">
+                            <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                            Your payment information is secure and encrypted
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="border-t border-emerald-800 pt-6 text-center text-emerald-300/60 text-sm">
+                <p>&copy; 2026 Urban Jungle Co. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
