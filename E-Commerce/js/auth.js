@@ -1,12 +1,12 @@
 /**
- * Urban Jungle Co. - Authentication Module
+ * ShopVerse - Authentication Module
  * Handles user registration, login, logout using localStorage
  */
 
 const Auth = {
     // Storage keys
-    USERS_KEY: 'urbanJungle_users',
-    SESSION_KEY: 'urbanJungle_session',
+    USERS_KEY: 'shopVerse_users',
+    SESSION_KEY: 'shopVerse_session',
 
     /**
      * Get all registered users
@@ -33,22 +33,9 @@ const Auth = {
     register(userData) {
         const { fullName, email, password } = userData;
 
-        // Validation
+        // Simple Validation
         if (!fullName || !email || !password) {
             return { success: false, message: 'All fields are required.' };
-        }
-
-        if (fullName.trim().length < 2) {
-            return { success: false, message: 'Name must be at least 2 characters.' };
-        }
-
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            return { success: false, message: 'Please enter a valid email address.' };
-        }
-
-        if (password.length < 6) {
-            return { success: false, message: 'Password must be at least 6 characters.' };
         }
 
         const users = this.getUsers();
@@ -140,6 +127,7 @@ const Auth = {
         if (typeof Cart !== 'undefined') {
             Cart.showNotification('You have been logged out.');
         }
+        setTimeout(() => window.location.reload(), 800);
     },
 
     /**
@@ -156,100 +144,59 @@ const Auth = {
             // Logged in state
             const firstName = session.fullName.split(' ')[0];
             const desktopHTML = `
-        <div class="relative group">
-          <button class="flex items-center gap-2 p-2 rounded-xl hover:bg-emerald-50 transition-colors text-gray-600 hover:text-emerald-700" id="userMenuBtn">
-            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center text-white text-sm font-bold">
-              ${firstName.charAt(0).toUpperCase()}
-            </div>
-            <span class="text-sm font-medium hidden xl:inline">${firstName}</span>
-          </button>
-          <div class="absolute right-0 top-full mt-2 w-52 bg-white rounded-xl shadow-lg border border-gray-100 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50" id="userDropdown">
-            <div class="px-4 py-3 border-b border-gray-100">
-              <p class="font-semibold text-gray-800 text-sm">${session.fullName}</p>
-              <p class="text-xs text-gray-500 truncate">${session.email}</p>
-            </div>
-            <a href="#" onclick="Auth.logout(); return false;" class="flex items-center gap-2 px-4 py-2.5 text-sm text-gray-600 hover:bg-red-50 hover:text-red-600 transition-colors">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
-              Sign Out
-            </a>
-          </div>
-        </div>
-      `;
+                <div style="position:relative;display:flex;align-items:center;gap:0.75rem;">
+                    <button class="nav-action-btn" style="display:flex;align-items:center;gap:0.5rem;padding:0.25rem 0.75rem;background:var(--gray-100);border-radius:var(--radius-full);width:auto;height:auto;" id="userMenuBtn">
+                        <div style="width:28px;height:28px;border-radius:50%;background:linear-gradient(to bottom right, var(--primary-500), var(--primary-700));color:white;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;">
+                            ${firstName.charAt(0).toUpperCase()}
+                        </div>
+                        <span style="font-size:0.875rem;font-weight:600;color:var(--gray-700);">${firstName}</span>
+                    </button>
+                    <button onclick="Auth.logout()" class="nav-action-btn" title="Logout" style="color:var(--danger-500);background:var(--danger-50);">
+                        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
+                    </button>
+                </div>
+            `;
             const mobileHTML = `
-        <div class="border-t border-gray-100 mt-4 pt-4">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center text-white font-bold">
-              ${firstName.charAt(0).toUpperCase()}
-            </div>
-            <div>
-              <p class="font-semibold text-gray-800">${session.fullName}</p>
-              <p class="text-xs text-gray-500">${session.email}</p>
-            </div>
-          </div>
-          <a href="#" onclick="Auth.logout(); return false;" class="mobile-nav-link text-red-500 hover:text-red-600">🚪 Sign Out</a>
-        </div>
-      `;
-            if (authLinksDesktop) authLinksDesktop.innerHTML = desktopHTML;
-            if (authLinksMobile) authLinksMobile.innerHTML = mobileHTML;
+                <div style="padding:1.5rem 0;border-top:1px solid var(--gray-100);margin-top:auto;">
+                    <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;">
+                        <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(to bottom right, var(--primary-500), var(--primary-700));color:white;display:flex;align-items:center;justify-content:center;font-size:1.25rem;font-weight:700;">
+                            ${firstName.charAt(0).toUpperCase()}
+                        </div>
+                        <div>
+                            <div style="font-weight:700;color:var(--gray-900);">${session.fullName}</div>
+                            <div style="font-size:0.8rem;color:var(--gray-500);">${session.email}</div>
+                        </div>
+                    </div>
+                    <button onclick="Auth.logout()" class="mobile-nav-link" style="width:100%;text-align:left;color:var(--danger-500);border:none;background:none;padding:0;">🚪 Logout</button>
+                </div>
+            `;
+            if (authLinksDesktop) {
+                authLinksDesktop.innerHTML = desktopHTML;
+                authLinksDesktop.classList.remove('hidden');
+            }
+            if (authLinksMobile) {
+                authLinksMobile.innerHTML = mobileHTML;
+            }
         } else {
             // Logged out state
             const desktopHTML = `
-        <a href="login.html" class="text-sm font-medium text-gray-600 hover:text-emerald-700 transition-colors px-3 py-2 rounded-xl hover:bg-emerald-50">Sign In</a>
-        <a href="register.html" class="text-sm font-medium text-white bg-gradient-to-r from-emerald-600 to-emerald-500 px-5 py-2.5 rounded-full hover:shadow-lg hover:shadow-emerald-200 transition-all hover:-translate-y-0.5">Sign Up</a>
-      `;
+                <div style="display:flex;align-items:center;gap:0.75rem;">
+                    <a href="login.html" class="nav-link" style="font-size:0.875rem;padding:0.5rem 1rem;">Sign In</a>
+                    <a href="register.html" class="btn-primary" style="padding:0.5rem 1.25rem;font-size:0.875rem;">Join Free</a>
+                </div>
+            `;
             const mobileHTML = `
-        <div class="border-t border-gray-100 mt-4 pt-4 space-y-2">
-          <a href="login.html" class="mobile-nav-link">🔑 Sign In</a>
-          <a href="register.html" class="mobile-nav-link">📝 Sign Up</a>
-        </div>
-      `;
-            if (authLinksDesktop) authLinksDesktop.innerHTML = desktopHTML;
-            if (authLinksMobile) authLinksMobile.innerHTML = mobileHTML;
-        }
-    },
-
-    /**
-     * Show inline form error
-     * @param {string} elementId - The error element id
-     * @param {string} message - Error message
-     */
-    showError(elementId, message) {
-        const el = document.getElementById(elementId);
-        if (el) {
-            el.textContent = message;
-            el.classList.remove('hidden');
-        }
-    },
-
-    /**
-     * Hide inline form error
-     * @param {string} elementId - The error element id
-     */
-    hideError(elementId) {
-        const el = document.getElementById(elementId);
-        if (el) {
-            el.textContent = '';
-            el.classList.add('hidden');
-        }
-    },
-
-    /**
-     * Toggle password visibility
-     * @param {string} inputId - Password input id
-     * @param {HTMLElement} toggleBtn - The toggle button
-     */
-    togglePassword(inputId, toggleBtn) {
-        const input = document.getElementById(inputId);
-        if (!input) return;
-        const isPassword = input.type === 'password';
-        input.type = isPassword ? 'text' : 'password';
-        // Update icon
-        const svg = toggleBtn.querySelector('svg');
-        if (svg) {
-            if (isPassword) {
-                svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.878 9.878L3 3m6.878 6.878L21 21"/>';
-            } else {
-                svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>';
+                <div style="padding:1.5rem 0;border-top:1px solid var(--gray-100);margin-top:auto;display:flex;flex-direction:column;gap:0.75rem;">
+                    <a href="login.html" class="mobile-nav-link">🔑 Sign In</a>
+                    <a href="register.html" class="btn-primary" style="justify-content:center;padding:0.875rem;">Create Account</a>
+                </div>
+            `;
+            if (authLinksDesktop) {
+                authLinksDesktop.innerHTML = desktopHTML;
+                authLinksDesktop.classList.remove('hidden');
+            }
+            if (authLinksMobile) {
+                authLinksMobile.innerHTML = mobileHTML;
             }
         }
     }

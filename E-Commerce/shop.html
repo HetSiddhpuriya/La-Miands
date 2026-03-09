@@ -4,236 +4,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop Plants | Urban Jungle Co.</title>
+    <title>Products | ShopVerse</title>
     <meta name="description"
-        content="Browse our complete collection of premium indoor plants, outdoor plants, succulents, and desert plants. Filter by category, price, and more.">
+        content="Browse our complete collection of products. Filter by category, sort by price, rating, and more. ShopVerse - Your online marketplace.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛍️</text></svg>">
 </head>
 
 <body>
 
     <!-- Navbar -->
     <nav id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <a href="index.html" class="logo-text flex items-center gap-2">
-                    🌿 <span class="hidden sm:inline">Urban</span> Jungle <span>Co.</span>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">SV</div>
+                <span>ShopVerse</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="shop.html" class="nav-link active">Products</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <div id="authLinksDesktop" class="hidden"></div>
+                <button id="searchBtn" class="nav-action-btn" aria-label="Search">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </button>
+                <a href="cart.html" class="nav-action-btn" aria-label="Cart">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z" />
+                    </svg>
+                    <span class="cart-count hidden">0</span>
                 </a>
-                <div class="hidden lg:flex items-center gap-8">
-                    <a href="index.html" class="nav-link">Home</a>
-                    <a href="shop.html" class="nav-link active">Shop</a>
-                    <a href="about.html" class="nav-link">About</a>
-                    <a href="contact.html" class="nav-link">Contact</a>
-                </div>
-                <div class="flex items-center gap-3">
-                    <button id="searchBtn"
-                        class="p-2.5 rounded-xl hover:bg-emerald-50 transition-colors text-gray-600 hover:text-emerald-700"
-                        aria-label="Search">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
-                    </button>
-                    <a href="cart.html"
-                        class="p-2.5 rounded-xl hover:bg-emerald-50 transition-colors text-gray-600 hover:text-emerald-700 relative"
-                        aria-label="Cart">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z" />
-                        </svg>
-                        <span class="cart-count hidden">0</span>
-                    </a>
-                    <!-- Auth Links (Desktop) -->
-                    <div id="authLinksDesktop" class="hidden lg:flex items-center gap-2"></div>
-                    <button id="mobileMenuBtn"
-                        class="lg:hidden p-2.5 rounded-xl hover:bg-emerald-50 transition-colors text-gray-600"
-                        aria-label="Menu">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
+                <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Menu">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
             </div>
         </div>
     </nav>
 
-    <!-- Mobile Menu Overlay -->
-    <div id="mobileMenuOverlay" class="mobile-menu-overlay"></div>
     <!-- Mobile Menu -->
+    <div id="mobileMenuOverlay" class="mobile-menu-overlay"></div>
     <div id="mobileMenu" class="mobile-menu">
         <div class="flex items-center justify-between mb-8">
-            <span class="logo-text text-xl">🌿 Urban Jungle</span>
-            <button id="mobileMenuClose" class="p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            <span class="logo" style="font-size:1.25rem;">
+                <div class="logo-icon" style="width:28px;height:28px;font-size:0.8rem;">SV</div>
+                ShopVerse
+            </span>
+            <button id="mobileMenuClose"
+                style="width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:8px;"
                 aria-label="Close menu">
-                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
         </div>
         <a href="index.html" class="mobile-nav-link">🏠 Home</a>
-        <a href="shop.html" class="mobile-nav-link">🛍️ Shop</a>
+        <a href="shop.html" class="mobile-nav-link">🛍️ Products</a>
         <a href="about.html" class="mobile-nav-link">ℹ️ About</a>
-        <a href="contact.html" class="mobile-nav-link">📧 Contact</a>
-        <a href="cart.html" class="mobile-nav-link">🛒 Cart</a>
-        <!-- Auth Links (Mobile) -->
+        <a href="contact.html" class="mobile-nav-link">📞 Contact</a>
         <div id="authLinksMobile"></div>
     </div>
 
     <!-- Search Modal -->
     <div id="searchModal" class="search-modal">
         <div class="search-modal-content">
-            <div class="p-5 border-b border-gray-100">
-                <div class="flex items-center gap-3">
-                    <svg class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor"
-                        viewBox="0 0 24 24">
+            <div class="search-input-wrap">
+                <svg width="20" height="20" fill="none" stroke="var(--gray-400)" viewBox="0 0 24 24"
+                    style="flex-shrink:0;">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <input type="text" id="searchInput" placeholder="Search products..." autocomplete="off">
+                <button id="searchClose" style="color:var(--gray-400);padding:0.375rem;border-radius:8px;"
+                    aria-label="Close search">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            d="M6 18L18 6M6 6l12 12" />
                     </svg>
-                    <input type="text" id="searchInput" placeholder="Search for plants..."
-                        class="flex-1 text-lg border-none outline-none font-medium" autocomplete="off">
-                    <button id="searchClose" class="p-1.5 rounded-lg hover:bg-gray-100 transition-colors text-gray-400"
-                        aria-label="Close search"><svg class="w-5 h-5" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M6 18L18 6M6 6l12 12" />
-                        </svg></button>
-                </div>
+                </button>
             </div>
-            <div id="searchResults" class="p-4 overflow-y-auto max-h-96">
-                <p class="text-gray-400 text-center py-8">Type at least 2 characters to search...</p>
+            <div id="searchResults" class="search-results">
+                <p style="text-align:center;color:var(--gray-400);padding:2.5rem 0;">Type at least 2 characters to
+                    search...</p>
             </div>
         </div>
     </div>
 
     <!-- Page Header -->
     <section class="page-header">
-        <div class="relative z-10">
-            <h1 class="text-3xl lg:text-5xl font-bold text-white mb-3" style="font-family: var(--font-display);">Our
-                Plant Collection</h1>
-            <p class="text-emerald-200/80 text-lg max-w-md mx-auto">Explore our hand-picked selection of premium plants
+        <div style="position:relative;z-index:2;">
+            <h1 style="font-size:clamp(1.75rem,4vw,3rem);font-weight:800;color:white;margin-bottom:0.75rem;">All
+                Products</h1>
+            <p style="color:rgba(255,255,255,0.65);font-size:1.05rem;max-width:500px;margin:0 auto;">
+                Discover our curated collection of premium products
             </p>
-            <nav class="flex items-center justify-center gap-2 text-sm text-emerald-300/70 mt-4">
-                <a href="index.html" class="hover:text-white transition-colors">Home</a>
+            <nav
+                style="display:flex;align-items:center;justify-content:center;gap:0.5rem;font-size:0.9rem;color:rgba(255,255,255,0.5);margin-top:1.25rem;">
+                <a href="index.html" style="color:rgba(255,255,255,0.5);transition:var(--transition-fast);"
+                    onmouseover="this.style.color='white'"
+                    onmouseout="this.style.color='rgba(255,255,255,0.5)'">Home</a>
                 <span>/</span>
-                <span class="text-white">Shop</span>
+                <span style="color:white;">Products</span>
             </nav>
         </div>
     </section>
 
     <!-- Shop Content -->
-    <section class="py-10 lg:py-16 bg-gray-50/50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section style="padding:2.5rem 0 4rem;background:var(--gray-50);">
+        <div style="max-width:1280px;margin:0 auto;padding:0 1.5rem;">
 
-            <!-- Filters -->
-            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 lg:p-6 mb-8">
-                <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
-                    <div class="flex flex-wrap items-center gap-3">
+            <!-- Filter Bar -->
+            <div class="filter-bar">
+                <div style="display:flex;flex-direction:column;gap:1rem;">
+                    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:0.75rem;">
                         <!-- Category -->
                         <select id="categoryFilter" class="filter-select">
-                            <option value="all">All Categories</option>
-                            <option value="Houseplants">Houseplants</option>
-                            <option value="Outdoor Plants">Outdoor Plants</option>
-                            <option value="Succulents">Succulents</option>
-                            <option value="Desert Plants">Desert Plants</option>
-                        </select>
-                        <!-- Price -->
-                        <select id="priceFilter" class="filter-select">
-                            <option value="all">All Prices</option>
-                            <option value="0-20">Under $20</option>
-                            <option value="20-30">$20 - $30</option>
-                            <option value="30-40">$30 - $40</option>
-                            <option value="40-100">$40+</option>
+                            <option value="">All Categories</option>
                         </select>
                         <!-- Sort -->
-                        <select id="sortFilter" class="filter-select">
+                        <select id="priceSort" class="filter-select">
                             <option value="featured">Featured</option>
                             <option value="price-low">Price: Low to High</option>
                             <option value="price-high">Price: High to Low</option>
-                            <option value="name">Name: A-Z</option>
                             <option value="rating">Top Rated</option>
+                            <option value="name">Name: A-Z</option>
                         </select>
-                        <!-- Clear Filters -->
+                        <!-- Clear -->
                         <button id="clearFilters"
-                            class="text-sm font-medium text-emerald-600 hover:text-emerald-800 transition-colors flex items-center gap-1">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            style="font-size:0.875rem;font-weight:500;color:var(--primary-600);display:flex;align-items:center;gap:0.375rem;transition:var(--transition-fast);"
+                            onmouseover="this.style.color='var(--primary-800)'"
+                            onmouseout="this.style.color='var(--primary-600)'">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M6 18L18 6M6 6l12 12" />
                             </svg>
                             Clear
                         </button>
                     </div>
-                    <div class="flex items-center gap-4 w-full lg:w-auto">
-                        <div class="relative flex-1 lg:flex-initial">
-                            <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
+                    <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
+                        <div style="position:relative;flex:1;min-width:200px;max-width:320px;">
+                            <svg width="18" height="18"
+                                style="position:absolute;left:0.875rem;top:50%;transform:translateY(-50%);color:var(--gray-400);"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                             </svg>
-                            <input type="text" id="shopSearch" placeholder="Search plants..."
-                                class="shop-search w-full lg:w-64">
+                            <input type="text" id="shopSearch" placeholder="Search products..." class="shop-search"
+                                style="width:100%;">
                         </div>
-                        <span id="resultCount" class="text-sm text-gray-500 whitespace-nowrap hidden lg:inline"></span>
+                        <span id="resultCount"
+                            style="font-size:0.875rem;color:var(--gray-500);white-space:nowrap;"></span>
                     </div>
                 </div>
             </div>
 
             <!-- Product Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="shopProductGrid">
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.5rem;"
+                id="shopProductGrid">
                 <!-- Rendered by JS -->
             </div>
+
+            <!-- Pagination -->
+            <div id="pagination" class="pagination"></div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer pt-16 pb-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+    <footer class="footer" style="padding:4rem 0 2rem;">
+        <div style="max-width:1280px;margin:0 auto;padding:0 1.5rem;">
+            <div
+                style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:2.5rem;margin-bottom:3rem;">
+                <!-- Brand -->
                 <div>
-                    <span class="logo-text text-white text-2xl block mb-4">🌿 Urban Jungle <span
-                            class="text-emerald-400">Co.</span></span>
-                    <p class="text-emerald-200/70 leading-relaxed">Bringing nature to your doorstep. Premium plants,
-                        expert advice, and a passion for green living.</p>
+                    <div class="logo" style="color:white;margin-bottom:1rem;">
+                        <div class="logo-icon">SV</div>
+                        <span>ShopVerse</span>
+                    </div>
+                    <p style="color:rgba(255,255,255,0.5);line-height:1.7;margin-bottom:1.5rem;">
+                        Your one-stop shop for quality products. Trusted by 50,000+ customers worldwide.
+                    </p>
+                    <div style="display:flex;gap:0.5rem;">
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                            </svg>
+                        </a>
+                    </div>
                 </div>
+                <!-- Quick Links -->
                 <div>
                     <h4 class="footer-heading">Quick Links</h4>
-                    <ul class="space-y-3">
+                    <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="shop.html">Products</a></li>
+                        <li><a href="cart.html">Cart</a></li>
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
+                <!-- Categories -->
                 <div>
                     <h4 class="footer-heading">Categories</h4>
-                    <ul class="space-y-3">
-                        <li><a href="shop.html?category=Houseplants">Houseplants</a></li>
-                        <li><a href="shop.html?category=Outdoor+Plants">Outdoor Plants</a></li>
-                        <li><a href="shop.html?category=Succulents">Succulents</a></li>
-                        <li><a href="shop.html?category=Desert+Plants">Desert Plants</a></li>
+                    <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;">
+                        <li><a href="shop.html?category=smartphones">Smartphones</a></li>
+                        <li><a href="shop.html?category=laptops">Laptops</a></li>
+                        <li><a href="shop.html?category=beauty">Beauty</a></li>
+                        <li><a href="shop.html?category=furniture">Furniture</a></li>
                     </ul>
                 </div>
+                <!-- Support -->
                 <div>
                     <h4 class="footer-heading">Support</h4>
-                    <ul class="space-y-3">
-                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-400 flex-shrink-0"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;">
+                        <li style="display:flex;align-items:center;gap:0.5rem;">
+                            <svg width="16" height="16" fill="none" stroke="var(--primary-400)" viewBox="0 0 24 24"
+                                style="flex-shrink:0;">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                            </svg> hello@urbanjungleco.com</li>
-                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-400 flex-shrink-0"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            </svg>
+                            support@shopverse.com
+                        </li>
+                        <li style="display:flex;align-items:center;gap:0.5rem;">
+                            <svg width="16" height="16" fill="none" stroke="var(--primary-400)" viewBox="0 0 24 24"
+                                style="flex-shrink:0;">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                            </svg> +1 (555) 123-4567</li>
+                            </svg>
+                            +1 (555) 123-4567
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-emerald-800 pt-6 text-center text-emerald-300/60 text-sm">
-                <p>&copy; 2026 Urban Jungle Co. All rights reserved.</p>
+            <div
+                style="border-top:1px solid rgba(255,255,255,0.08);padding-top:1.5rem;text-align:center;color:rgba(255,255,255,0.35);font-size:0.85rem;">
+                <p>&copy; 2026 ShopVerse. All rights reserved.</p>
             </div>
         </div>
     </footer>
