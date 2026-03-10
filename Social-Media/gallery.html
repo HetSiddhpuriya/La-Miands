@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SocialHub – Gallery</title>
+    <meta name="description" content="Explore a photo gallery on SocialHub with hover effects and lightbox viewer." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-red': '#780000',
+                        'accent-red': '#C1121F',
+                        'dark-red': '#AE1F23',
+                        'cosmos-blue': '#003049',
+                        'marble-blue': '#669BBC',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div id="navbarContainer"></div>
+
+    <main class="max-w-7xl mx-auto px-4 py-10">
+        <h1 class="section-title text-3xl font-bold mb-8 text-gray-800">
+            <i class="fa-solid fa-camera-retro mr-2 text-cosmos-blue"></i> Photo Gallery
+        </h1>
+
+        <!-- Controls -->
+        <div class="flex items-center gap-4 mb-6">
+            <button id="loadMoreBtn" onclick="loadMorePhotos()" class="btn-gradient text-sm">
+                <i class="fa-solid fa-shuffle mr-1"></i> Load More
+            </button>
+            <span id="photoCount" class="text-slate-500 text-sm"></span>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div id="galleryGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+            <!-- Photos loaded here -->
+        </div>
+
+        <div id="gallerySpinner" class="flex justify-center py-12">
+            <div class="spinner"></div>
+        </div>
+    </main>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+        <button class="lightbox-close" aria-label="Close">&times;</button>
+        <img id="lightboxImg" src="" alt="Full size" />
+        <p id="lightboxTitle" class="lightbox-title"></p>
+    </div>
+
+    <div id="footerContainer"></div>
+
+    <script src="js/api.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+
+</html>

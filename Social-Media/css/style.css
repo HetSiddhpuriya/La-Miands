@@ -1,0 +1,456 @@
+/* ===================================================
+   SocialHub – Custom Styles (Light Red/Blue Theme)
+   Palette: Gochujang Red · Crimson Blaze · Varden · Cosmos Blue · Blue Marble
+   =================================================== */
+
+/* ---------- Google Font ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* ---------- CSS Variables ---------- */
+:root {
+  --primary-red: #780000;
+  --accent-red: #C1121F;
+  --dark-red: #AE1F23;
+  --cosmos-blue: #003049;
+  --marble-blue: #669BBC;
+
+  --bg-page: #f8f9fa;
+  --bg-card: #ffffff;
+  --bg-card-hover: #fafafa;
+  --text-dark: #1a1a2e;
+  --text-body: #374151;
+  --text-muted: #6b7280;
+  --border-color: #e5e7eb;
+  --border-accent: #AE1F23;
+  --shadow-red: 0 8px 25px rgba(193, 18, 31, 0.12);
+  --shadow-soft: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+/* ---------- Base ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg-page);
+  color: var(--text-dark);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e5e7eb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-red);
+  border-radius: 3px;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--primary-red);
+  border-bottom: none;
+  box-shadow: 0 4px 20px rgba(120, 0, 0, 0.25);
+}
+
+.nav-link {
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #ffffff;
+  transition: width 0.3s, left 0.3s;
+  border-radius: 2px;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+  left: 0;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #ffffff !important;
+}
+
+.nav-link.active {
+  background: var(--dark-red);
+  border-radius: 0.375rem;
+  padding: 0.375rem 0.75rem;
+}
+
+/* ---------- Search Bar ---------- */
+.search-input {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 9999px;
+  padding: 0.5rem 1rem 0.5rem 2.5rem;
+  color: #ffffff;
+  transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
+  outline: none;
+  width: 220px;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.search-input:focus {
+  border-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.25);
+  width: 280px;
+}
+
+/* ---------- Card Styles ---------- */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-red);
+  border-color: var(--border-accent);
+}
+
+/* ---------- Post Card ---------- */
+.post-card .post-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.post-card:hover .post-image {
+  transform: scale(1.05);
+}
+
+.post-card .image-wrapper {
+  overflow: hidden;
+}
+
+/* ---------- Like Button Animation ---------- */
+.like-btn {
+  cursor: pointer;
+  transition: transform 0.2s, color 0.3s;
+  color: var(--text-muted);
+}
+
+.like-btn:hover {
+  color: var(--accent-red);
+}
+
+.like-btn.liked {
+  color: var(--accent-red);
+  animation: likePopAnim 0.4s ease;
+}
+
+@keyframes likePopAnim {
+  0% {
+    transform: scale(1);
+  }
+
+  30% {
+    transform: scale(1.3);
+  }
+
+  60% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ---------- Avatar ---------- */
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #fff;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, var(--primary-red), var(--cosmos-blue));
+}
+
+/* ---------- Skeleton Loader ---------- */
+.skeleton {
+  background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 50%, #e5e7eb 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 0.5rem;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* ---------- Spinner ---------- */
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid var(--border-color);
+  border-top-color: var(--accent-red);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------- Gallery Image Hover ---------- */
+.gallery-item {
+  overflow: hidden;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s, filter 0.5s;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+  filter: brightness(0.85);
+}
+
+.gallery-item .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(120, 0, 0, 0.7) 0%, transparent 60%);
+  display: flex;
+  align-items: flex-end;
+  padding: 0.75rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+/* ---------- Lightbox ---------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s;
+}
+
+.lightbox.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 1rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+  transform: scale(0.9);
+  transition: transform 0.35s;
+}
+
+.lightbox.show img {
+  transform: scale(1);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s;
+  background: none;
+  border: none;
+}
+
+.lightbox-close:hover {
+  transform: scale(1.2);
+}
+
+.lightbox-title {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  max-width: 80vw;
+}
+
+/* ---------- Comments Section ---------- */
+.comments-section {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.comments-section.open {
+  max-height: 2000px;
+}
+
+/* ---------- Badge / Tag ---------- */
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border-radius: 9999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ---------- Section Title ---------- */
+.section-title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-red), var(--dark-red));
+  border-radius: 2px;
+}
+
+/* ---------- Profile Header ---------- */
+.profile-header {
+  background: linear-gradient(135deg, rgba(120, 0, 0, 0.06), rgba(0, 48, 73, 0.06));
+  border: 1px solid var(--border-color);
+  border-radius: 1.5rem;
+}
+
+/* ---------- Album Card ---------- */
+.album-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.album-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-red);
+}
+
+/* ---------- Fade-in ---------- */
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* ---------- Button Primary ---------- */
+.btn-gradient {
+  background: var(--accent-red);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-gradient:hover {
+  background: var(--dark-red);
+  transform: translateY(-1px);
+}
+
+/* ---------- Button Secondary ---------- */
+.btn-secondary {
+  background: var(--cosmos-blue);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-secondary:hover {
+  background: var(--marble-blue);
+  transform: translateY(-1px);
+}
+
+/* ---------- Mobile Nav Toggle ---------- */
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu.open {
+  display: flex;
+}
+
+/* ---------- Responsive Helpers ---------- */
+@media (max-width: 768px) {
+
+  .search-input,
+  .search-input:focus {
+    width: 100%;
+  }
+}

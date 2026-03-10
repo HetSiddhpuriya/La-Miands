@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SocialHub – Home Feed</title>
+  <meta name="description" content="SocialHub – A modern social media feed with posts, comments, and user profiles." />
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary-red': '#780000',
+            'accent-red': '#C1121F',
+            'dark-red': '#AE1F23',
+            'cosmos-blue': '#003049',
+            'marble-blue': '#669BBC',
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-gray-50">
+
+  <!-- Navbar (injected by JS) -->
+  <div id="navbarContainer"></div>
+
+  <!-- Dashboard Layout Container -->
+  <div class="max-w-7xl mx-auto px-4 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+      <!-- LEFT SIDEBAR: Navigation & Profile (Visible on Desktop) -->
+      <aside id="leftSidebar" class="hidden lg:block lg:col-span-1 space-y-6 sticky top-24 self-start">
+        <!-- Profile Card & Nav Menu injected here -->
+      </aside>
+
+      <!-- CENTER FEED: Main Content -->
+      <main class="col-span-1 md:col-span-2 lg:col-span-2 space-y-6">
+        <div id="feedContainer" class="space-y-6">
+          <!-- Posts loaded here -->
+        </div>
+      </main>
+
+      <!-- RIGHT SIDEBAR: Trending Widgets (Visible on Tablet/Desktop) -->
+      <aside id="rightSidebar" class="hidden md:block md:col-span-1 lg:col-span-1 space-y-6 sticky top-24 self-start">
+        <!-- Trending Users & Photos injected here -->
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- Lightbox (shared) -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img id="lightboxImg" src="" alt="Full size" />
+    <p id="lightboxTitle" class="lightbox-title"></p>
+  </div>
+
+  <!-- Footer -->
+  <div id="footerContainer"></div>
+
+  <!-- Scripts -->
+  <script src="js/api.js"></script>
+  <script src="js/feed.js"></script>
+</body>
+
+</html>

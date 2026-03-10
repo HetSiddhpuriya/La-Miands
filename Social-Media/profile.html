@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SocialHub – User Profile</title>
+    <meta name="description" content="View user profile, posts, and albums on SocialHub." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-red': '#780000',
+                        'accent-red': '#C1121F',
+                        'dark-red': '#AE1F23',
+                        'cosmos-blue': '#003049',
+                        'marble-blue': '#669BBC',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div id="navbarContainer"></div>
+
+    <main class="max-w-5xl mx-auto px-4 py-10">
+        <!-- Profile Header -->
+        <div id="profileHeader">
+            <div class="flex justify-center py-12">
+                <div class="spinner"></div>
+            </div>
+        </div>
+
+        <!-- Tabs -->
+        <div id="tabsContainer" class="hidden mt-10">
+            <div class="flex gap-4 border-b border-gray-200 mb-6">
+                <button id="tabPosts" class="tab-btn pb-3 font-semibold text-accent-red border-b-2 border-accent-red"
+                    onclick="switchTab('posts')">
+                    <i class="fa-solid fa-pen-to-square mr-1"></i> Posts
+                </button>
+                <button id="tabAlbums"
+                    class="tab-btn pb-3 font-semibold text-gray-400 border-b-2 border-transparent hover:text-gray-600"
+                    onclick="switchTab('albums')">
+                    <i class="fa-solid fa-images mr-1"></i> Albums
+                </button>
+            </div>
+
+            <div id="postsSection"></div>
+            <div id="albumsSection" class="hidden"></div>
+        </div>
+    </main>
+
+    <div id="footerContainer"></div>
+
+    <script src="js/api.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+
+</html>
