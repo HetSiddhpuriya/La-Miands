@@ -34,6 +34,24 @@ function App() {
           >
             Decrease
           </button>
+          <button
+            className="py-4 px-8 text-4xl rounded-lg bg-[#555] text-white active:scale-95 transition"
+            onClick={() => setNumber((count) => count = 0)}
+          >
+            Reset
+          </button>
+          <button
+            className="py-4 px-8 text-4xl rounded-lg bg-[#555] text-white active:scale-95 transition"
+            onClick={() => setNumber((count) => count + 5)}
+          >
+            Add By 5
+          </button>
+          <button
+            className="py-4 px-8 text-4xl rounded-lg bg-[#555] text-white active:scale-95 transition"
+            onClick={() => setNumber((count) => count - 5)}
+          >
+            Subtract By 5
+          </button>
         </div>
       </section>
     </>
